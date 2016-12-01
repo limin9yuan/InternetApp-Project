@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @check_out.serial_number %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @check_out.member %>
+</p>
+
+<p>
+  <strong>Check out date:</strong>
+  <%= @check_out.check_out_date %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @check_out.due_date %>
+</p>
+
+<%= link_to 'Edit', edit_check_out_path(@check_out) %> |
+<%= link_to 'Back', check_outs_path %>

@@ -1,0 +1,1 @@
+json.partial! "electroniccopies/electroniccopy", electroniccopy: @electroniccopy

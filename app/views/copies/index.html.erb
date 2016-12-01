@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Copies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Serial number</th>
+      <th>Book</th>
+      <th>Copy seq</th>
+      <th>Available</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @copies.each do |copy| %>
+      <tr>
+        <td><%= copy.serial_number %></td>
+        <td><%= copy.book %></td>
+        <td><%= copy.copy_seq %></td>
+        <td><%= copy.available %></td>
+        <td><%= link_to 'Show', copy %></td>
+        <td><%= link_to 'Edit', edit_copy_path(copy) %></td>
+        <td><%= link_to 'Destroy', copy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Copy', new_copy_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Check Outs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Serial number</th>
+      <th>Member</th>
+      <th>Check out date</th>
+      <th>Due date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @check_outs.each do |check_out| %>
+      <tr>
+        <td><%= check_out.serial_number %></td>
+        <td><%= check_out.member %></td>
+        <td><%= check_out.check_out_date %></td>
+        <td><%= check_out.due_date %></td>
+        <td><%= link_to 'Show', check_out %></td>
+        <td><%= link_to 'Edit', edit_check_out_path(check_out) %></td>
+        <td><%= link_to 'Destroy', check_out, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Check out', new_check_out_path %>

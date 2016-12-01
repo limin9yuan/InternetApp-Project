@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @electroniccopy.book %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @electroniccopy.data %>
+</p>
+
+<%= link_to 'Edit', edit_electroniccopy_path(@electroniccopy) %> |
+<%= link_to 'Back', electroniccopies_path %>
